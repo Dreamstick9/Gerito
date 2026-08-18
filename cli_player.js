@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // // I have to make a cli music player
 
 // /* The feature's I would want 

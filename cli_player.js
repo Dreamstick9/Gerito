@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/local/bin/node
 // // I have to make a cli music player
 
 // /* The feature's I would want 
@@ -42,7 +42,7 @@ const { execFile } = require('node:child_process')
 const readline = require('node:readline')
 const rl = readline.createInterface({
     input: process.stdin,
-    output: process.stdout
+    output: process.stdout,
 })
 
 
@@ -56,6 +56,10 @@ rl.question("Paste the path of the music directory, Type 'c' for current \n \n -
         p = p.filter((i)=>{
             return i.endsWith(".mp3")
         })
+        if (p.length == 0){
+            console.log("There are no songs present please check the current directory")
+            rl.close()
+        }
         copy = p
         copy = copy.map((i)=>{
             return i.slice(0, -4)
@@ -69,6 +73,10 @@ rl.question("Paste the path of the music directory, Type 'c' for current \n \n -
         p = p.filter((i)=>{
             return i.endsWith(".mp3")
         })
+        if (p.length == 0){
+            console.log("There are no songs present in the given directory path, please check the directory")
+            rl.close()
+        }
         copy = p
         copy = copy.map((i)=>{
             return i.slice(0, -4)

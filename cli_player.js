@@ -119,4 +119,4 @@ rl.question("Paste the path of the music directory, Type 'c' for current \n \n -
 // const folderpath = '/Users/kushagargargsmacbook/Appdevelective/Lecture-17-aug/cli-music-player/songs'
 
 // let contents_of_folder = fs.readdirSync(folderpath)
-// console.log(contents_of_folder)
+// console.log(contents_of_folder) 

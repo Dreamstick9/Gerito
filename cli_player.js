@@ -38,6 +38,7 @@ console.log()
 console.log()
 const path = require('node:path')
 const fs = require('node:fs')
+const { spawn } = require('child_process');
 const { execFile } = require('node:child_process')
 const readline = require('node:readline')
 const rl = readline.createInterface({
@@ -98,11 +99,7 @@ rl.question("Paste the path of the music directory, Type 'c' for current \n \n -
         rl.question(`So you want to play ${r}...? \n \n Yes or No? \n \n ---> `, te =>{
             if(te.trim().toLowerCase()==="yes"){
                 console.log(`Now playing ${r}`)
-                execFile('sh', ['-c', `afplay "${v}"`], (err) =>{
-                    if (err){
-                        console.log("Could not play:", err.message)
-                    }
-                })
+                spawn('afplay', [v])
                 rl.close()
             }else{
                 console.log("Okay bro take your time")

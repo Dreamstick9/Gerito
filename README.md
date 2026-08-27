@@ -6,6 +6,17 @@
 - Node.js
 - MP3 files
 
+## Download the app
+
+For Apple Silicon Macs, download the binary from the [Gerito v1.0.0 release](https://github.com/Dreamstick9/Gerito/releases/tag/v1.0.0).
+
+In Terminal, go to the folder that contains the downloaded file and run:
+
+```sh
+chmod +x gerito-macos-arm64
+./gerito-macos-arm64
+```
+
 ## Run the player
 
 1. Open Terminal.
